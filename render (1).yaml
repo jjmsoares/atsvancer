@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: erpnext-vancer
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: SITE_NAME
+        value: site1.local
+      - key: INSTALL_APPS
+        value: erpnext
+      - key: ADMIN_PASSWORD
+        value: admin
+      - key: DB_ROOT_PASSWORD
+        value: root
